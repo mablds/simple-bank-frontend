@@ -7,22 +7,25 @@ class App extends React.Component {
     super(props)
 
     this.state = {
-      account: "",
-      password: ""
+      email: "",
+      password: "",
+      accountInfo: {}
     }
   }
 
   loginHandler = async (event) => {
+    //http://simple-bank.herokuapp.com/auth
     event.preventDefault();
     axios.post('http://simple-bank.herokuapp.com/auth', {
-      header: {
-        "Access-Control-Allow-Origin": "*"
-      },
-      body: {
-        account: this.state.account,
+        email: this.state.email ,
         password: this.state.password
       }
-    }).then((res) => console.log(res));
+    ).then((res) => {
+      if(res.status === 200) {
+        this.state.accountInfo = res.data;
+        console.log(this.state.accountInfo)
+      }
+    })
   }
 
   handleChange = event => {
@@ -35,9 +38,9 @@ class App extends React.Component {
       <div className="App">
         <form className="container" onSubmit={this.loginHandler}>
           <h2>Bem vindo de volta!</h2>
-            <input type="text" name="account" placeholder="Account" onChange={this.handleChange} />
-            <input type="password" name="account-password" placeholder="Password" onChange={this.handleChange}/>
-            <button id="submit" type="submit" value="Acessar"  >Acessar</button>
+            <input type="text" name="email" placeholder="Enter your email" onChange={this.handleChange} />
+            <input type="password" name="password" placeholder="Type your very secure password" onChange={this.handleChange}/>
+            <button id="submit" type="submit" value="Acessar">Acessar</button>
         </form>
       </div>
     );
