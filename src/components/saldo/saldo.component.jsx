@@ -2,10 +2,20 @@ import React from 'react';
 
 import './saldo.styles.scss'
 
-const Login = () => (
-    <div>
-      <h1>hahahah</h1>
-    </div>
-  )
+class Saldo extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = props
+    }
 
-  export default Login
+    render() {
+        console.log(this.state)
+        return (
+            <div>
+                teste
+            </div>
+        )
+    }
+}
+
+export default Saldo;
