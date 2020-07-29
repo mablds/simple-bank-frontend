@@ -5,14 +5,24 @@ import './saldo.styles.scss'
 class Saldo extends React.Component {
     constructor(props) {
         super(props)
-        this.state = props
+
+        const userLoggedIn = JSON.parse(localStorage.getItem('login'));
+
+        this.state = {
+            id: userLoggedIn.id,
+            account: userLoggedIn.account,
+            owner: userLoggedIn.owner,
+            value: userLoggedIn.value,
+            admin: userLoggedIn.admin,
+            token: userLoggedIn.token
+        }
     }
 
     render() {
-        console.log(this.state)
         return (
             <div>
-                teste
+                ${this.state.value}
+                ${this.state.owner}
             </div>
         )
     }

@@ -18,14 +18,15 @@ class Login extends React.Component {
     loginHandler = async (event) => {
         //http://simple-bank.herokuapp.com/auth
         event.preventDefault();
-        axios.post('http://simple-bank.herokuapp.com/auth', {
+        axios.post('http://localhost:3001/auth', {
             email: this.state.email ,
             password: this.state.password
           }
     ).then((res) => {
         if(res.status === 200) {
             this.state.accountInfo = res.data;
-            console.log(this.state.accountInfo)
+            localStorage.setItem('login', JSON.stringify(this.state.accountInfo));
+            this.props.history.push('/home');
           }
         })
     }

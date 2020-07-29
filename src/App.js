@@ -10,7 +10,7 @@ function App() {
       <BrowserRouter>
         <div>
           <Route exact path='/' component={Login} />
-          <Route exact path='/main-menu' component={Saldo} />
+          <Route exact path='/home' component={Saldo} />
         </div>
       </BrowserRouter>
     );
