@@ -24,8 +24,7 @@ class Login extends React.Component {
           }
     ).then((res) => {
         if(res.status === 200) {
-            this.state.accountInfo = res.data;
-            localStorage.setItem('login', JSON.stringify(this.state.accountInfo));
+            localStorage.setItem('login', JSON.stringify(res.data));
             this.props.history.push('/home');
           }
         })
