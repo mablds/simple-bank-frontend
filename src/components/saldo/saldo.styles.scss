@@ -1,10 +1,28 @@
-
-
 #saldo {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 50%;
+    width: 100%;
     background-color: white;
+    font-size: 30px;
+    color: rgb(27, 26, 26);
+}
+
+#saldo div {
+    padding: 20px;
+}
+
+#valor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    color: rgb(27, 26, 26);
+    width: 100%;
+}
+
+#eye {
+    width: 2rem;
+    margin-left: 1.5rem;
 }
