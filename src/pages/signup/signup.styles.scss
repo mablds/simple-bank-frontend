@@ -1,0 +1,53 @@
+.App-signup {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-self: center;
+    text-align: center;
+    width: 30%;
+    height: 100%;
+    height: 500px;
+    margin: auto 10%;
+    
+  }
+  
+  .App-signup h2 {
+    margin-bottom: 10%;
+  }
+  
+  .App-signup input {
+    width: 100%;
+    justify-content: center;
+    align-self: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    align-content: center;
+    margin-bottom: 15px;
+  }
+  
+  .App-signup button{
+    width: 40%;
+    justify-content: center;
+    align-self: center;
+    border: none;
+    background-color: #de7b00;
+    border-radius: 3em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #351603;
+    margin: 20px;
+    
+  }
+  
+  .App-signup button:hover{
+    background-color: #663800;
+    color: #e6d6ff;
+    cursor: pointer;
+  }
+
+  #home {
+      margin-top: 50px;
+      width: 50px;
+      padding-bottom: 10px;
+  }
