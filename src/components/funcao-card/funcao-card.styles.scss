@@ -1,0 +1,26 @@
+.card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100px;
+    width: 100px;
+    border: 1.5px solid gray;
+    border-radius: 1em;
+    margin: 15px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.card-container img {
+    width: 50%;
+    padding: 10px;
+}
+
+.card-container span {
+    font-size: 80%;
+}
+
+.card-container:hover {
+    border: 3px solid rgb(68, 68, 68);
+}
