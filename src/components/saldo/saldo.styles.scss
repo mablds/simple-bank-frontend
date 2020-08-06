@@ -4,13 +4,19 @@
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    background-color: white;
     font-size: 30px;
     color: rgb(27, 26, 26);
+    padding-bottom: 50px;
 }
 
-#saldo div {
-    padding: 20px;
+#owner {
+    margin-top: 50px;
+}
+
+#account-info {
+    padding-top: 10px;
+    padding-bottom: 50px;
+    font-size: 15px;
 }
 
 #valor {
@@ -20,9 +26,13 @@
     flex-direction: row;
     color: rgb(27, 26, 26);
     width: 100%;
+    font-size: 50px;
+    margin-top: 30px;
+    box-sizing: border-box;
 }
 
 #eye {
     width: 2rem;
     margin-left: 1.5rem;
+    cursor: pointer;
 }
