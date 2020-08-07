@@ -23,7 +23,7 @@ const Saldo = () => {
         }).then((response) => {
             response.status === 200 ? setAccountVerifiedInfo(response.data) : invalidToken();
         });
-    }
+    };
 
     useEffect(() => {
         getAccountInfo();
