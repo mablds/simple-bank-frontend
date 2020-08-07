@@ -5,7 +5,6 @@ import catComputer from '../../public-imgs/imgs/cat3.svg';
 
 const axios = require('axios');
 
-
 class Login extends React.Component {
     constructor(props) {
         super(props);
@@ -13,7 +12,8 @@ class Login extends React.Component {
         this.state = {
             email: "",
             password: "",
-            accountInfo: {}
+            accountInfo: {},
+            wrongLogin: false
         }
     }
 
@@ -28,6 +28,8 @@ class Login extends React.Component {
             localStorage.clear();
             localStorage.setItem('login', JSON.stringify(res.data));
             this.props.history.push('/home');
+          } else {
+            this.setState({ wrongLogin: true });
           }
         })
     }
@@ -49,6 +51,7 @@ class Login extends React.Component {
                         <h2>Bem vindo de volta!</h2>
                         <input type="text" name="email" placeholder="Insira seu email" onChange={this.handleChange} />
                         <input type="password" name="password" placeholder="Insira sua senha" onChange={this.handleChange}/>
+                        {this.state.wrongLogin ? <span id="login-error">E-mail ou senha incorretos.<br/></span> : ''}
                         <button id="submit" type="submit" value="Acessar">Acessar</button><br/>
                         <Link to={"/signup"} style={ { color: 'inherit', textDecoration: 'inherit'} }>
                             <button id="signup">Criar Conta</button>
